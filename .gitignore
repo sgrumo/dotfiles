@@ -8,3 +8,6 @@ foo.*
 *.log
 data
 iterm2/
+
+
+*.pyc
