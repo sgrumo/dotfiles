@@ -11,3 +11,5 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Up half page, center
 -- Search with centered results
 vim.keymap.set("n", "n", "nzzzv") -- Next search result, center
 vim.keymap.set("n", "N", "Nzzzv") -- Previous search result, center
+
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
