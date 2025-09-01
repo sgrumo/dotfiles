@@ -170,7 +170,6 @@ return {
         end,
       })
 
-
       -- Diagnostic Config
       -- See :help vim.diagnostic.Opts
       vim.diagnostic.config {
