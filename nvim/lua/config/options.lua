@@ -75,4 +75,3 @@ vim.opt.smartindent = true
 
 -- Disable annoying change of working directory based on LSP
 vim.g.root_spec = { 'cwd' }
-
