@@ -1,7 +1,9 @@
 return {
   'tiagovla/tokyodark.nvim',
   opts = {
-    -- custom options here
+    custom_highlights = {
+      NeoTreeGitModified = { fg = '#9aced6' },
+    },
   },
   config = function(_, opts)
     require('tokyodark').setup(opts) -- calling setup is optional
