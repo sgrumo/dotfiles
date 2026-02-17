@@ -24,7 +24,7 @@ return {
           return nil
         else
           return {
-            timeout_ms = 500,
+            timeout_ms = 2500,
             lsp_format = 'fallback',
           }
         end
@@ -37,8 +37,14 @@ return {
         -- You can use 'stop_after_first' to run the first available formatter from the list
         javascript = { 'prettier' },
         typescript = { 'prettier' },
+        yaml = { 'prettier' },
+        markdown = { 'prettier' },
+        typescriptreact = { 'prettier' },
+        json = { 'prettier' },
+        css = { 'prettier' },
+        html = { 'prettier' },
+        javascriptreact = { 'prettier' },
       },
     },
   },
 }
-
