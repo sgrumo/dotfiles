@@ -40,7 +40,7 @@ return {
         yaml = { 'oxfmt' },
         markdown = { 'prettier' },
         typescriptreact = { 'oxfmt' },
-        json = { 'prettier' },
+        json = { 'oxfmt' },
         css = { 'prettier' },
         html = { 'prettier' },
         javascriptreact = { 'oxfmt' },
