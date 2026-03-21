@@ -1,3 +1,10 @@
+local function web_formatter(bufnr)
+  if vim.fs.root(bufnr, { '.oxfmtrc', '.oxfmtrc.json', 'oxfmt.config.js' }) then
+    return { 'oxfmt' }
+  end
+  return { 'prettier' }
+end
+
 return {
   { -- Autoformat
     'stevearc/conform.nvim',
@@ -31,19 +38,15 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'oxfmt' },
-        typescript = { 'oxfmt' },
-        yaml = { 'oxfmt' },
+        javascript = web_formatter,
+        javascriptreact = web_formatter,
+        typescript = web_formatter,
+        typescriptreact = web_formatter,
+        json = web_formatter,
+        yaml = web_formatter,
+        css = web_formatter,
+        html = web_formatter,
         markdown = { 'prettier' },
-        typescriptreact = { 'oxfmt' },
-        json = { 'oxfmt' },
-        css = { 'prettier' },
-        html = { 'prettier' },
-        javascriptreact = { 'oxfmt' },
       },
     },
   },
